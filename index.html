@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rémo — Tout Reims &amp; ses alentours, au même endroit</title>
+  <meta name="description" content="Le portail qui regroupe toutes les infos utiles sur Reims et ses alentours : tourisme & patrimoine, sorties & agenda, restaurants & bars, transports & vie pratique.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- ===== En-tête ===== -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Accueil — Rémo, le portail de Reims & ses alentours">
+        <span class="brand-mark">R</span>
+        <span class="brand-text">
+          <span class="brand-title">Rémo</span>
+          <span class="brand-sub">Reims &amp; alentours</span>
+        </span>
+      </a>
+      <button class="mobile-toggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="actus.html">Actus</a></li>
+        <li><a href="forum.html">Forum</a></li>
+        <li><a href="tourisme.html">Tourisme</a></li>
+        <li><a href="sorties.html">Sorties</a></li>
+        <li><a href="restaurants.html">Restaurants</a></li>
+        <li><a href="pratique.html">Pratique</a></li>
+        <li><a href="communes.html">Communes</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <span class="hero-eyebrow">Cité des sacres · Champagne</span>
+          <h1>Tout Reims, <em>au même endroit</em>.</h1>
+          <p class="lead">
+            Patrimoine, sorties, bonnes tables, transports et démarches du quotidien :
+            le portail qui rassemble l'essentiel pour vivre et découvrir Reims et ses alentours.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="tourisme.html">Découvrir la ville</a>
+            <a class="btn btn-outline" href="pratique.html">Infos pratiques</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <!-- Illustration : cathédrale + bulles de champagne -->
+          <svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" role="img">
+            <defs>
+              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#F6E3DE"/>
+                <stop offset="1" stop-color="#FBF7F0"/>
+              </linearGradient>
+              <linearGradient id="stone" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#E7D6B6"/>
+                <stop offset="1" stop-color="#C9A86F"/>
+              </linearGradient>
+              <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#D9B45F"/>
+                <stop offset="1" stop-color="#A07C32"/>
+              </linearGradient>
+            </defs>
+            <circle cx="210" cy="200" r="200" fill="url(#sky)"/>
+            <!-- Soleil / rosace lumineuse -->
+            <circle cx="300" cy="120" r="40" fill="#E9C3BE" opacity="0.6"/>
+            <!-- Cathédrale -->
+            <g transform="translate(120 90)">
+              <!-- Tour gauche -->
+              <rect x="0" y="80" width="40" height="180" fill="url(#stone)"/>
+              <polygon points="0,80 20,40 40,80" fill="url(#gold)"/>
+              <!-- Tour droite -->
+              <rect x="140" y="80" width="40" height="180" fill="url(#stone)"/>
+              <polygon points="140,80 160,40 180,80" fill="url(#gold)"/>
+              <!-- Nef centrale -->
+              <rect x="40" y="120" width="100" height="140" fill="url(#stone)"/>
+              <polygon points="40,120 90,70 140,120" fill="#D8C091"/>
+              <!-- Rosace -->
+              <circle cx="90" cy="150" r="22" fill="#FBF7F0"/>
+              <circle cx="90" cy="150" r="22" fill="none" stroke="url(#gold)" stroke-width="3"/>
+              <line x1="68" y1="150" x2="112" y2="150" stroke="url(#gold)" stroke-width="2"/>
+              <line x1="90" y1="128" x2="90" y2="172" stroke="url(#gold)" stroke-width="2"/>
+              <!-- Portails -->
+              <path d="M58 260 v-40 a12 12 0 0 1 24 0 v40 z" fill="#8A6B3A"/>
+              <path d="M98 260 v-40 a12 12 0 0 1 24 0 v40 z" fill="#8A6B3A"/>
+              <!-- Fenêtres tours -->
+              <rect x="13" y="120" width="14" height="34" rx="7" fill="#8A6B3A"/>
+              <rect x="153" y="120" width="14" height="34" rx="7" fill="#8A6B3A"/>
+            </g>
+            <!-- Sol -->
+            <rect x="0" y="350" width="420" height="50" fill="#E7D6B6" opacity="0.6"/>
+            <!-- Bulles de champagne -->
+            <g fill="#C49A4A">
+              <circle cx="60" cy="300" r="6" opacity="0.7"/>
+              <circle cx="80" cy="270" r="4" opacity="0.6"/>
+              <circle cx="45" cy="250" r="3" opacity="0.5"/>
+              <circle cx="360" cy="300" r="6" opacity="0.7"/>
+              <circle cx="345" cy="265" r="4" opacity="0.6"/>
+              <circle cx="372" cy="240" r="3" opacity="0.5"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Rubriques ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Explorer</span>
+          <h2>Par où commencer&nbsp;?</h2>
+          <p>Toutes les rubriques pour tout trouver rapidement, que vous viviez ici ou que vous veniez d'arriver — de l'actu de la semaine au forum des habitants.</p>
+        </div>
+        <div class="card-grid">
+          <a class="card card-clickable" href="actus.html">
+            <div class="icon">🗞️</div>
+            <h3>Actus de la semaine</h3>
+            <p>L'essentiel de l'actualité de Reims et du Grand Reims, vérifié et sourcé auprès des médias locaux.</p>
+            <span class="card-link">Lire l'actu</span>
+          </a>
+          <a class="card card-clickable" href="forum.html">
+            <div class="icon">💬</div>
+            <h3>Forum citoyen</h3>
+            <p>Partagez bons plans, infos de quartier, questions et entraide entre habitants du Grand Reims.</p>
+            <span class="card-link">Ouverture prochaine</span>
+          </a>
+          <a class="card card-clickable" href="tourisme.html">
+            <div class="icon">⛪</div>
+            <h3>Tourisme &amp; patrimoine</h3>
+            <p>La cathédrale des sacres, les maisons de champagne, les musées et les trésors classés à l'UNESCO.</p>
+            <span class="card-link">Découvrir</span>
+          </a>
+          <a class="card card-clickable" href="sorties.html">
+            <div class="icon">🎭</div>
+            <h3>Sorties &amp; agenda</h3>
+            <p>Festivals, concerts, expos, marchés&nbsp;: les rendez-vous et les lieux culturels de la ville.</p>
+            <span class="card-link">Voir l'agenda</span>
+          </a>
+          <a class="card card-clickable" href="restaurants.html">
+            <div class="icon">🍽️</div>
+            <h3>Restaurants &amp; bars</h3>
+            <p>Tables étoilées, brasseries, bars à champagne et spécialités locales (biscuit rose, ratafia…).</p>
+            <span class="card-link">Se régaler</span>
+          </a>
+          <a class="card card-clickable" href="pratique.html">
+            <div class="icon">🧭</div>
+            <h3>Transports &amp; vie pratique</h3>
+            <p>Tram &amp; bus, gares TGV, parkings, mairie, santé, numéros utiles&nbsp;: tout le quotidien.</p>
+            <span class="card-link">S'organiser</span>
+          </a>
+          <a class="card card-clickable" href="communes.html">
+            <div class="icon">🗺️</div>
+            <h3>Communes du Grand Reims</h3>
+            <p>Les 143 communes de l'agglomération et le site officiel de chaque mairie, avec recherche instantanée.</p>
+            <span class="card-link">Voir l'annuaire</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Reims en bref ===== -->
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Reims en bref</span>
+          <h2>Une grande ville à taille humaine</h2>
+          <p>Première ville de Champagne, capitale historique du sacre des rois de France, à seulement 45&nbsp;minutes de Paris en TGV.</p>
+        </div>
+        <div class="card-grid">
+          <div class="card">
+            <div class="icon">👥</div>
+            <h3>~182 000 habitants</h3>
+            <p>Les Rémois et Rémoises. Près de 300 000 habitants à l'échelle de la communauté urbaine du Grand Reims (143 communes).</p>
+          </div>
+          <div class="card">
+            <div class="icon">🚄</div>
+            <h3>45 min de Paris</h3>
+            <p>En TGV depuis la gare Reims-Centre, en plein cœur de ville, ou la gare Champagne-Ardenne TGV (Bezannes).</p>
+          </div>
+          <div class="card">
+            <div class="icon">🏛️</div>
+            <h3>3 sites UNESCO</h3>
+            <p>La cathédrale, l'ancien palais du Tau et la basilique Saint-Remi, inscrits au patrimoine mondial.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🍾</div>
+            <h3>Capitale du champagne</h3>
+            <p>Des kilomètres de crayères creusées sous la ville et les plus grandes maisons à visiter.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Appel à l'action ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="callout">
+          <div class="callout-text">
+            <h3>Une info qui manque&nbsp;? Une adresse à ajouter&nbsp;?</h3>
+            <p>Ce portail est mis à jour régulièrement. Les pages renvoient aussi vers les sites officiels pour les horaires et l'actualité.</p>
+          </div>
+          <a class="btn" href="pratique.html#contact">Nous écrire</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Pied de page ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <h4>Rémo</h4>
+          <p>Le portail indépendant qui rassemble les informations utiles sur Reims et la Champagne, pour les habitants comme pour les nouveaux arrivants.</p>
+        </div>
+        <div>
+          <h4>Rubriques</h4>
+          <ul class="footer-links">
+            <li><a href="actus.html">Actus de la semaine</a></li>
+            <li><a href="forum.html">Forum citoyen</a></li>
+            <li><a href="tourisme.html">Tourisme &amp; patrimoine</a></li>
+            <li><a href="sorties.html">Sorties &amp; agenda</a></li>
+            <li><a href="restaurants.html">Restaurants &amp; bars</a></li>
+            <li><a href="pratique.html">Transports &amp; vie pratique</a></li>
+            <li><a href="communes.html">Communes du Grand Reims</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Sites officiels</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.reims.fr" target="_blank" rel="noopener">Ville de Reims</a></li>
+            <li><a href="https://www.reims-tourisme.com" target="_blank" rel="noopener">Office de tourisme</a></li>
+            <li><a href="https://www.citura.fr" target="_blank" rel="noopener">Citura (tram &amp; bus)</a></li>
+            <li><a href="https://www.grandreims.fr" target="_blank" rel="noopener">Grand Reims</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Rémo — portail d'information indépendant sur Reims &amp; ses alentours.</span>
+        <span>Vérifiez toujours horaires &amp; tarifs sur les sites officiels.</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Retour en haut">↑</button>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
