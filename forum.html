@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Forum citoyen (ouverture prochaine) — Reims &amp; alentours · Rémo</title>
-  <meta name="description" content="Le forum des habitants de Reims et du Grand Reims ouvrira bientôt : bons plans, infos de quartier, questions et entraide.">
+  <title>Forum citoyen — Reims &amp; alentours · Bulles de Reims</title>
+  <meta name="description" content="Le forum des habitants de Reims et du Grand Reims : créez un compte pour partager bons plans, infos de quartier, questions et entraide.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -15,10 +15,10 @@
 
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="index.html" aria-label="Accueil — Rémo, le portail de Reims & ses alentours">
-        <span class="brand-mark">R</span>
+      <a class="brand" href="index.html" aria-label="Accueil — Bulles de Reims, l'actu de Reims &amp; du Grand Reims">
+        <span class="brand-mark"><svg viewBox="308 250 464 466" width="22" height="22" fill="currentColor" aria-hidden="true"><rect x="330" y="352" width="104" height="330"/><polygon points="330,352 382,250 434,352"/><rect x="646" y="352" width="104" height="330"/><polygon points="646,352 698,250 750,352"/><rect x="434" y="458" width="212" height="224"/><polygon points="434,458 540,372 646,458"/><rect x="308" y="682" width="464" height="34"/></svg></span>
         <span class="brand-text">
-          <span class="brand-title">Rémo</span>
+          <span class="brand-title">Bulles de Reims</span>
           <span class="brand-sub">Reims &amp; alentours</span>
         </span>
       </a>
@@ -46,31 +46,79 @@
       </div>
     </section>
     <section class="section">
-      <div class="container" style="max-width:780px;">
-        <div class="coming-soon">
-          <div class="cs-icon">💬</div>
-          <span class="badge">Ouverture prochaine</span>
-          <h2>Le forum des habitants arrive bientôt</h2>
-          <p>Un espace pour partager entre Rémois et habitants du Grand Reims : bons plans, infos de quartier, questions et entraide. Nous finalisons la version partagée et modérée — revenez très vite&nbsp;!</p>
-          <ul class="cs-list">
-            <li>📝 Publier des messages et répondre aux autres</li>
-            <li>🏷️ Trier par catégorie (bons plans, travaux, sécurité, événements…)</li>
-            <li>🛡️ Signalement et modération pour un espace sain</li>
-          </ul>
-          <div class="cs-actions">
-            <a class="btn" href="index.html">Retour à l'accueil</a>
-            <a class="btn btn-outline" href="actus.html">Voir les actus</a>
+      <div class="container" style="max-width:820px;">
+        <style>
+          .auth-box{background:var(--white);border:1px solid rgba(138,122,102,.16);border-radius:var(--radius);box-shadow:var(--shadow-sm);padding:24px;max-width:440px;margin:0 auto 26px}
+          .auth-tabs{display:flex;gap:8px;margin-bottom:16px}
+          .auth-tab{flex:1;padding:10px;border:1px solid rgba(138,122,102,.25);background:var(--cream);border-radius:999px;font:inherit;font-weight:600;color:var(--muted);cursor:pointer}
+          .auth-tab.is-active{background:var(--wine);color:#fff;border-color:var(--wine)}
+          .auth-box .btn{width:100%;justify-content:center;margin-top:4px}
+          .auth-msg{font-size:.9rem;background:var(--cream-2);border-radius:8px;padding:10px 12px;margin:0 0 12px;color:var(--ink)}
+          .auth-msg.error{background:rgba(110,27,46,.08);color:var(--wine)}
+          .auth-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;background:var(--white);border:1px solid rgba(138,122,102,.16);border-radius:var(--radius);padding:16px 22px;box-shadow:var(--shadow-sm);margin-bottom:24px}
+          .fp-btn.liked{background:var(--wine);color:#fff;border-color:var(--wine)}
+        </style>
+
+        <div id="forum-auth" class="forum-auth"><p class="live-status">Chargement…</p></div>
+
+        <form id="forum-form" class="forum-form" autocomplete="off" hidden>
+          <h2 class="forum-form-title">Partager une info</h2>
+          <label class="ff-field"><span>Catégorie</span>
+            <select id="ff-cat">
+              <option>Bon plan</option>
+              <option>Info de quartier</option>
+              <option>Travaux &amp; voirie</option>
+              <option>Sécurité</option>
+              <option>Événement</option>
+              <option>Question / entraide</option>
+              <option>Autre</option>
+            </select>
+          </label>
+          <label class="ff-field"><span>Votre message</span>
+            <textarea id="ff-text" rows="4" maxlength="2000" placeholder="Partagez une info utile, une question, un bon plan…" required></textarea>
+          </label>
+          <div class="ff-actions">
+            <span class="ff-hint">Restez courtois · pas de données personnelles d'autrui · 2000 caractères max</span>
+            <button type="submit" class="btn">Publier</button>
           </div>
-        </div>
+        </form>
       </div>
     </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Discussions</span>
+          <h2>Les messages des habitants</h2>
+          <p>Publication immédiate, réservée aux membres connectés. Un contenu déplacé&nbsp;? Utilisez « Signaler ».</p>
+        </div>
+        <div class="forum-toolbar">
+          <select id="forum-filter" class="forum-filter" aria-label="Filtrer par catégorie">
+              <option value="">Toutes les catégories</option>
+              <option>Bon plan</option>
+              <option>Info de quartier</option>
+              <option>Travaux &amp; voirie</option>
+              <option>Sécurité</option>
+              <option>Événement</option>
+              <option>Question / entraide</option>
+              <option>Autre</option>
+          </select>
+          <span class="filter-count" id="forum-count"></span>
+        </div>
+        <div id="forum-list" class="forum-list" aria-live="polite"></div>
+        <p class="forum-empty" id="forum-empty" hidden>Aucun message pour l'instant. Lancez la discussion&nbsp;!</p>
+      </div>
+    </section>
+
+    <script src="assets/js/forum-config.js"></script>
+    <script type="module" src="assets/js/forum.js"></script>
   </main>
 
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-about">
-          <h4>Rémo</h4>
+          <h4>Bulles de Reims</h4>
           <p>Le portail indépendant qui rassemble les informations utiles sur Reims et la Champagne, pour les habitants comme pour les nouveaux arrivants.</p>
         </div>
         <div>
@@ -96,7 +144,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© <span data-year>2026</span> Rémo — portail d'information indépendant sur Reims &amp; ses alentours.</span>
+        <span>© <span data-year>2026</span> Bulles de Reims — portail d'information indépendant sur Reims &amp; ses alentours.</span>
         <span>Vérifiez toujours horaires &amp; tarifs sur les sites officiels.</span>
       </div>
     </div>

@@ -1,4 +1,4 @@
-# Rémo — portail d'information sur Reims & ses alentours
+# Bulles de Reims — portail d'information sur Reims & ses alentours
 
 Site statique (HTML / CSS / JavaScript). Aucune installation, aucun compte : il s'ouvre dans n'importe quel navigateur et fonctionne hors-ligne.
 
